@@ -5,14 +5,15 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="alien" class="bt.gcit.edu.Alien" scope="prototype">
+    <bean id="alien" class="bt.gcit.edu.Alien" scope="prototype" autowire="byType">
         <property name="age" value="52">
         </property>
+        <!-- <property name="comp" ref="comp1"></property> -->
 
-        <property name="lap" ref="laps">
-        </property>
+        <!-- <constructor-arg index="1" ref="laps"/>
+        <constructor-arg  value="21"/> -->
     </bean>
-    <bean id="laps" class="bt.gcit.edu.Laptop">
-        
-    </bean>
+    <!-- <bean id="comp" class="bt.gcit.edu.Laptop"> -->
+    <bean id="comp1" class="bt.gcit.edu.Desktop" primary="true" lazy-init="true"></bean>
+    <bean id="comp2" class="bt.gcit.edu.Laptop"></bean>
 </beans>

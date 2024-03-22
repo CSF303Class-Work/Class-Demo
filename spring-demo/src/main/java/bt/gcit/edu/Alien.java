@@ -2,10 +2,16 @@ package bt.gcit.edu;
 
 public class Alien {
     private int age;
-    private Laptop lap;
-    // public Alien() {
-    //     System.out.println("Object is created");
+    private Computer comp;
+
+    // public Alien(int age, Laptop lap) {
+    //     System.out.println("Alien Object Created!!");
+    //     this.age = age;
     // }
+
+    public Alien() {
+        System.out.println("Alien Object is created");
+    }
 
     public int getAge() {
         return age;
@@ -15,18 +21,17 @@ public class Alien {
         // System.out.println("Setter called");
         this.age = age;
     }
+
+    public Computer getComp() {
+        return comp;
+    }
+
+    public void setComp(Computer comp) {
+        this.comp = comp;
+    }
     
-    public Laptop getLap() {
-        return lap;
-    }
-
-    public void setLap(Laptop lap) {
-        this.lap = lap;
-    }
-
     public void code() {
         System.out.println("Coding");
-        lap.IsRunning();
+        comp.compile();
     }
-
 }
